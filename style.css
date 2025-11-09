@@ -47,14 +47,17 @@ header {
 }
 
 .social-links {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .social-links a i:hover {
     border-bottom: 3px solid #ff0028;
     transform: scale(1.2);
 }
-
+.social-links a i:active {
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
 
 .profile-image {
     width: 500px;
