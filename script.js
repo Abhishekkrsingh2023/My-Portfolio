@@ -56,3 +56,39 @@ navLinks.forEach(link => {
         navBar.classList.remove('active');
     });
 });
+
+// contact form handling
+const form = document.querySelector('.contact-form');
+console.log(form)
+
+// Need configuration for backend to enable form submission
+
+// const submitUserData = async (data) => {
+//     try {
+//         const response = await fetch('http://localhost:8000/contact', {
+//             method: 'POST',
+//             headers: {
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify(data)
+//         });
+//         if (response.ok) {
+//             alert('Form submitted successfully!');
+//         }
+//     } catch (error) {
+//         console.error('Error submitting form:', error);
+//     }
+// };
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const userData = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        message: form.message.value.trim()
+    };
+    submitUserData(userData);
+
+    form.reset();
+});
