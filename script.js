@@ -88,7 +88,7 @@ form.addEventListener('submit', function (e) {
         email: form.email.value.trim(),
         message: form.message.value.trim()
     };
-    submitUserData(userData);
-
+    // submitUserData(userData);
+    console.log(userData);
     form.reset();
 });
